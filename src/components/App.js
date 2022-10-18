@@ -1,9 +1,13 @@
 import React from 'react';
-
+import { useReducer } from 'react';
+import { initialState, reducer } from '../reducers/index.js'
 import './App.css';
-
 import TotalDisplay from './TotalDisplay';
 import CalcButton from './CalcButton';
+
+const Calculator = () => {
+  const [state, dispatch] = useReducer(reducer, initialState)
+}
 
 function App() {
   return (
